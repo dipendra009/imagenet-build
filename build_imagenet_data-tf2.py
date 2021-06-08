@@ -97,9 +97,9 @@ import numpy as np
 import six
 import tensorflow as tf
 
-train_directory = '/nfstmp/z004njq/imagenet/ILSVRC/Data/CLS-LOC/train'
-validation_directory = '/nfstmp/z004njq/imagenet/ILSVRC/val'
-output_directory = '/nfstmp/z004njq/imagenet/tf-data'
+train_directory = '/datasets/imagenet/train'
+validation_directory = '/datasets/imagenet/val'
+output_directory = '/datasets/imagenet/tf-records'
 num_threads=8
 
 train_shards = 1024
@@ -139,8 +139,8 @@ imagenet_metadata_file = 'imagenet_metadata.txt'
 # Note that there might exist mulitple bounding box annotations associated
 # with an image file.
 
-train_bbox_file = '/nfstmp/z004njq/imagenet/ILSVRC/train_bounding_boxes.csv'
-val_bbox_file = '/nfstmp/z004njq/imagenet/ILSVRC/val_bounding_boxes.csv'
+train_bbox_file = '/datasets/imagenet/train_bounding_boxes.csv'
+val_bbox_file = '/datasets/imagenet/val_bounding_boxes.csv'
 
 # 20870 image with single channels in the dataset
 single_channel_image_count = 0
